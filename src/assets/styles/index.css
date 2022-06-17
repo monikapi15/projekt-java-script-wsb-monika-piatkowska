@@ -1,0 +1,39 @@
+.course-modal {
+    width: 1000px !important;
+    overflow-y: scroll;
+}
+
+@media(max-width: 1199px) {
+    .course-modal {
+        width: 80%;
+    }
+}
+
+.home .header-section {
+    min-height: 93vh;
+}
+
+@media(max-width: 991px) {
+    .home .header-section {
+        padding: 50px 0;
+        min-height: auto;
+   }
+}
+.home .header-section .background {
+    background-image: url("../images/header-section-bg.jpg");
+    background-size: cover;
+    background-position: bottom;
+    z-index: -2;
+}
+
+.home .header-section .opacity {
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+.home .features-section{
+    padding: 80px 0;
+}
+.login section {
+    min-height: 60vh;
+}
