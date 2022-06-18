@@ -14,7 +14,7 @@ export const DataProvider = (props) => {
         "Kurs JavaScript w Kodilli jest elementem realizowanych przez internet bootcampów Web Developer Plus oraz Front-end: React. W tym pierwszym, trwającym 9 miesięcy szkoleniu, poznasz od podstaw języki HTML i CSS umożliwiające budowę stron i interfejsów aplikacji internetowych, nauczysz się też korzysta z takich narzędzi jak Bootstrap, Sass czy Git, nauczysz się również programować w języku JavaScript. Jednym ze sprawdzianów będzie przygotowanie własnej strony internetowej w oparciu o nabyte umiejętności. Poznasz także platformę Node.js czy framework React.js. Drugi kurs online, czyli Front-end: React to tworzenie aplikacji internetowych od podstaw właśnie z nauką wykorzystywania frameworka React w praktyce.\n",
       categories: ["Frontend", "Backend", "Testing"],
       levels: ["junior", "mid", "senior"],
-      url: "https://sblcorp.com/blog/wp-content/uploads/2021/06/Learn-About-the-Power-of-JavaScript.jpg",
+      url: "https://www.youtube.com/watch?v=4oSVCLUPs5U",
       photo:
         "https://moralis.io/wp-content/uploads/2021/07/Moralis-Blogpost-JavaScript-Explained-07272021-V12.png",
     },

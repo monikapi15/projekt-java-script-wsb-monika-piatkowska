@@ -12,8 +12,6 @@ function CoursesForm({ data }) {
   const navigate = useNavigate();
   const dataContext = useContext(DataContext);
 
-  console.log("before", data);
-
   return (
     <>
       <Formik
@@ -51,8 +49,6 @@ function CoursesForm({ data }) {
 
               courses[index] = editCourse;
               dataContext.setCourses(courses);
-
-              console.log(dataContext.courses);
             } else {
               const courseId = Math.random();
               const newCourse = { id: courseId, ...values };

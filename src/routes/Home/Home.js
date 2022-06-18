@@ -7,9 +7,7 @@ import { AuthContext } from "../../common/contexts/AuthContext";
 function Home() {
   const dataContext = useContext(DataContext);
   const authContext = useContext(AuthContext);
-  const featuredCourses = dataContext.courses.filter(
-    (elem) => elem.featured === true
-  );
+  const featuredCourses = dataContext.courses.filter((elem) => elem.featured);
 
   return (
     <div className="home">
@@ -41,7 +39,7 @@ function Home() {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h2 className="text-center mb-5">Zobacz jakie oferujemy kursy</h2>
+              <h2 className="text-center mb-5">Zobacz nasze najlepsze kursy</h2>
             </div>
           </div>
           <div className="row g-3">

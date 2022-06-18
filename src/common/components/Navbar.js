@@ -1,7 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../contexts/AuthContext";
-import AuthGuard from "./AuthGuard";
 import RolesGuard from "./RolesGuard";
 
 function Navbar() {
@@ -22,11 +21,11 @@ function Navbar() {
             Courssero
           </Link>
 
-          <AuthGuard>
+          {authContext?.currentUser?.email && (
             <span className="navbar-text">
               {authContext?.currentUser?.email}
             </span>
-          </AuthGuard>
+          )}
         </div>
 
         <button
@@ -53,28 +52,30 @@ function Navbar() {
                 </Link>
               </li>
             )}
-            <AuthGuard>
-              <RolesGuard roles={["admin"]}>
+            {authContext?.currentUser && (
+              <>
+                <RolesGuard roles={["admin"]}>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/users">
+                      Użytkownicy
+                    </Link>
+                  </li>
+                </RolesGuard>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/users">
-                    Użytkownicy
+                  <Link className="nav-link" to="/courses">
+                    Kursy
                   </Link>
                 </li>
-              </RolesGuard>
-              <li className="nav-item">
-                <Link className="nav-link" to="/courses">
-                  Kursy
-                </Link>
-              </li>
-              <li className="nav-item">
-                <button
-                  onClick={() => logout()}
-                  className="nav-link bg-transparent border-0"
-                >
-                  Wyloguj się
-                </button>
-              </li>
-            </AuthGuard>
+                <li className="nav-item">
+                  <button
+                    onClick={() => logout()}
+                    className="nav-link bg-transparent border-0"
+                  >
+                    Wyloguj się
+                  </button>
+                </li>
+              </>
+            )}
           </ul>
         </div>
       </div>
